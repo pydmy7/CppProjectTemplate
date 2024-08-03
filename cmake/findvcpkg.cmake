@@ -1,4 +1,4 @@
-if(DEFINED ENV{VCPKG_ROOT})
+if (DEFINED ENV{VCPKG_ROOT})
     set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
 else()
     message(FATAL_ERROR "VCPKG_ROOT is not defined")

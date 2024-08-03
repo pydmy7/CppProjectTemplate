@@ -139,4 +139,4 @@ Checks: '-*,
 '
 
 WarningsAsErrors: '*'
-/* HeaderFilterRegex: '.*core/.+\.(hpp|cpp)$' */
+/* HeaderFilterRegex: '.*cppprojecttemplate/.+\.(hpp|cpp)$' */
