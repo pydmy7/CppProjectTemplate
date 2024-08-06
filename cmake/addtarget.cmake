@@ -41,10 +41,8 @@ function(addExecutable target)
 
     useSanitize(${target})
     
-    if (myself)
-        # useClangFormat(${target} ${CMAKE_CURRENT_SOURCE_DIR})
-        useClangTidy(${target})
-    endif()
+    # useClangFormat(${target} ${CMAKE_CURRENT_SOURCE_DIR})
+    useClangTidy(${target})
 endfunction(addExecutable)
 
 
@@ -92,8 +90,6 @@ function(addLibrary target)
 
     useSanitize(${target})
     
-    if (myself)
-        # useClangFormat(${target} ${CMAKE_CURRENT_SOURCE_DIR})
-        useClangTidy(${target})
-    endif()
+    # useClangFormat(${target} ${CMAKE_CURRENT_SOURCE_DIR})
+    useClangTidy(${target})
 endfunction(addLibrary)

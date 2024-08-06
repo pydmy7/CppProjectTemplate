@@ -1,4 +1,6 @@
 function(useClangTidy target)
+    message("clang-tidy ${target}")
+
     find_program(CLANG-TIDY_PATH clang-tidy REQUIRED)
     set_target_properties(
         ${target}

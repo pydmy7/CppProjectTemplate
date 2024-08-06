@@ -139,6 +139,7 @@ Checks: '-*,
 
     cppcoreguidelines-pro-type-member-init,
     hicpp-member-init,
+    clang-diagnostic-array-bounds,
 '
 
 WarningsAsErrors: '*'

@@ -2,9 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 
 project(CppProjectTemplate)
 
-if (myself)
-    set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-endif()
+include(cmake/cmakeconfig.cmake)
 
 add_subdirectory(cmake)
 add_subdirectory(cppprojecttemplate)

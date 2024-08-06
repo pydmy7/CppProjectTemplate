@@ -4,8 +4,8 @@ echo "clear"
 echo "`nRemove-Item -Path ./build -Recurse -Force"
 Remove-Item -Path ./build -Recurse -Force
 
-echo "`nsource: cmake -S . -B build -G Ninja -D myself=ON"
-cmake -S . -B build -G Ninja -D myself=ON
+echo "`nsource: cmake -S . -B build -G Ninja"
+cmake -S . -B build -G Ninja
 
 echo "`nbuild: cmake --build build -j"
 cmake --build build -j
