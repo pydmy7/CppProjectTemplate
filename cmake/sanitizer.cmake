@@ -1,4 +1,4 @@
-function(useSanitize target_name)
+function(useSanitizer target_name)
     isMSVCBackend(msvcbackend)
     isMinGWBackend(mingwbackend)
     isGNUBackend(gnubackend)
@@ -8,8 +8,8 @@ function(useSanitize target_name)
         target_compile_options(${target_name} PRIVATE /W4 /analyze)
     endif()
 
-    if (CMAKE_BUILD_TYPE STREQUAL "Sanitize")
-        message("Sanitize enabled")
+    if (CMAKE_BUILD_TYPE STREQUAL "Sanitizer")
+        message("Sanitizer enabled")
 
         if (${gnubackend} OR ${mingwbackend})
             target_compile_options(
@@ -48,5 +48,10 @@ function(useSanitize target_name)
                 /fsanitize=undefined
             )
         endif()
-    endif()    
-endfunction(useSanitize)
+
+        if (WIN32)
+            target_link_libraries(${target_name} PRIVATE Sanitizer::Address)
+            copyDll(${target_name})
+        endif()
+    endif()
+endfunction(useSanitizer)

@@ -39,7 +39,7 @@ function(addExecutable target)
         set_target_properties(${target} PROPERTIES AUTOUIC_SEARCH_PATHS "${CMAKE_CURRENT_SOURCE_DIR}/ui")
     endif()
 
-    useSanitize(${target})
+    useSanitizer(${target})
     
     # useClangFormat(${target} ${CMAKE_CURRENT_SOURCE_DIR})
     useClangTidy(${target})
@@ -88,7 +88,7 @@ function(addLibrary target)
         set_target_properties(${target} PROPERTIES AUTOUIC_SEARCH_PATHS "${CMAKE_CURRENT_SOURCE_DIR}/ui")
     endif()
 
-    useSanitize(${target})
+    useSanitizer(${target})
     
     # useClangFormat(${target} ${CMAKE_CURRENT_SOURCE_DIR})
     useClangTidy(${target})

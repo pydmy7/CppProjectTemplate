@@ -1,5 +1,5 @@
 function(copyDll target_name)
-    if(WIN32)
+    if (WIN32)
         add_custom_command(
             TARGET ${target_name}
             POST_BUILD
