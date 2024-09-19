@@ -40,7 +40,7 @@ function(addExecutable target)
     endif()
 
     useSanitizer(${target})
-    
+
     # useClangFormat(${target} ${CMAKE_CURRENT_SOURCE_DIR})
     useClangTidy(${target})
 endfunction(addExecutable)
