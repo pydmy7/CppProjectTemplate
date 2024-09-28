@@ -2,7 +2,7 @@
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
- 
+
 auto initLog = []() -> int {
     const auto file_logger {
         spdlog::basic_logger_mt(
@@ -11,7 +11,6 @@ auto initLog = []() -> int {
         )
     };
     spdlog::set_default_logger(file_logger);
-
     return 0;
 }();
 
