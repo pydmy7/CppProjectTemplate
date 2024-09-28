@@ -6,6 +6,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_subdirectory(cmake)
 
+include(3rdlibs/findlibrary.cmake)
 add_subdirectory(3rdlibs)
 
 add_subdirectory(cppprojecttemplate)
